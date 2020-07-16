@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Look a website</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div>
+        The time is : 
+        <span id ="time">
+        </span>
+    </div>
+    </body>
+    <script>
+        let element = document.getElementById("time");
+        element.innerHTML = new Date().toTimeString()
+        setInterval(()=>{
+            element.innerHTML = new Date().toTimeString()
+        },1000);
+
+        fetch("http://localhost:3004/api?name=mike")
+        .then(res=>resp.json())
+        .then(json=>console.log(json))
+
+    </script>
+    </html>
+</body>
+</html>
